@@ -1,0 +1,2 @@
+spring.application.name=Fronted
+server.port = 9209

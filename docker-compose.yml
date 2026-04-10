@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+
+  postgres:
+    image: 'postgres:latest'
+    container_name: postgres
+    build:
+      context: ./postgres
+    ports:
+      - '5459:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: Control1
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+  backend:
+    image: 1knighttt/backend:latest
+    container_name: backend
+    build:
+      context: ./Control1
+    environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/Control1
+    - SPRING_DATASOURCE_USERNAME=postgres
+    - SPRING_DATASOURCE_PASSWORD=1234
+    ports:
+      - '8209:8209'
+    depends_on:
+      - postgres
+
+  frontend:
+    image: 1knighttt/frontend:latest
+    container_name: frontend
+    build:
+      context: ./fronted
+    ports:
+      - '9209:9209'
+    depends_on:
+      - backend
+
+volumes:
+  pg-data:

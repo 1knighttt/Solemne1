@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mantenedor Personas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid mt-3">
+    <h1>Mantenedor Personas</h1>
+    
+    <table class="table table-bordered table-striped mt-4">
+        <thead class="thead-light">
+            <tr>
+                <th>NOMBRE</th>
+                <th>FUNCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="p : ${personas}">
+                <td th:text="${p.nombre}"></td>
+                
+                <td>
+                    <a href="#" class="btn btn-warning btn-sm text-white">Editar</a>
+                    
+                    <a th:href="@{/crud/persona/{id}(id=${p.id})}" 
+                       class="btn btn-danger btn-sm">
+                       Borrar
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot class="thead-light">
+            <tr>
+                <th>NOMBRE</th>
+                <th>FUNCIONES</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+</body>
+</html>

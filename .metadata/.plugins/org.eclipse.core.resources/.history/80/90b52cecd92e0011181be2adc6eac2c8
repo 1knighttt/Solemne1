@@ -1,0 +1,8 @@
+spring.application.name=Control1
+server.port=9209
+logging.file.name=Control1.log
+spring.datasource.url=jdbc:postgresql://localhost:5459/Control1
+spring.datasource.username=postgres
+spring.datasource.password=1234
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect

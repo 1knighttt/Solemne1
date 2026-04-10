@@ -1,0 +1,63 @@
+package com.example.demo.controller;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.demo.entity.PersonaEntity;
+import com.example.demo.interfaces.IPersonaService;
+
+@Controller
+@RequestMapping("crud/persona") //http://localhost:7777/crud/persona/
+public class PersonaController {
+
+    @Autowired
+    private IPersonaService service;
+
+    @GetMapping("/")
+    public String persona(Model model) {
+        List<PersonaEntity> personas = service.findAll();
+        model.addAttribute("personas", personas);
+        return "index";
+    }
+
+    @GetMapping("/{id}")
+    public String deleteById(@PathVariable Long id, Model model) {
+        try {
+            service.deleteById(id);
+        } catch (Exception e) {
+            
+        }
+        
+        
+        List<PersonaEntity> personas = service.findAll();
+        model.addAttribute("personas", personas);
+        return "index";
+    }
+
+    @GetMapping("/nuevo")
+    public String showForm(Model model) {
+        model.addAttribute("persona", new PersonaEntity());
+        return "formulario"; 
+    }
+
+
+    @GetMapping("/editar/{id}")
+    public String showEditForm(@PathVariable Long id, Model model) {
+        PersonaEntity p = service.findById(id);
+        model.addAttribute("persona", p);
+        return "formulario";
+    }
+
+    @PostMapping("/guardar")
+    public String save(@ModelAttribute("persona") PersonaEntity persona) {
+        service.save(persona);
+        return "redirect:/crud/persona/";
+    }
+}
