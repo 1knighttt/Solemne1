@@ -1,0 +1,14 @@
+
+psql -U postgres
+CREATE DATABASE remedio;
+
+
+git init
+git add .
+git commit -m "Initial commit - Solemne 1"
+git remote add origin https://github.com/1knighttt/Solemne1.git
+git push -u origin master
+
+
+Backend: 6789
+Frontend: 9876
