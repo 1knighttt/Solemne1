@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Remedio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2 th:text="${remedio.id == null} ? 'Nuevo Remedio' : 'Editar Remedio'"></h2>
+    
+    <form th:action="@{/crud/remedio/guardar}" th:object="${remedio}" method="post" class="mt-4">
+        <input type="hidden" th:field="*{id}">
+        
+        <div class="mb-3">
+            <label class="form-label">Nombre Científico</label>
+            <input type="text" th:field="*{nombreCientifico}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Marca</label>
+            <input type="text" th:field="*{marca}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Gramos</label>
+            <input type="number" step="0.1" th:field="*{gramos}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Año</label>
+            <input type="number" th:field="*{anio}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Tipo (M/B/G)</label>
+            <input type="text" th:field="*{tipo}" maxlength="1" class="form-control" required>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" th:field="*{controlado}" class="form-check-input" id="check">
+            <label class="form-check-label" for="check">¿Es controlado?</label>
+        </div>
+        
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <a th:href="@{/crud/remedio}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</body>
+</html>

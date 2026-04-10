@@ -1,0 +1,706 @@
+2026-04-10 08:20:25.680  INFO 10204 --- [main] com.example.demo.Control1Application     : Starting Control1Application using Java 17.0.4.1 on Windows10-2025 with PID 10204 (C:\Users\usuario\Desktop\wrk\Control1\target\classes started by usuario in C:\Users\usuario\Desktop\wrk\Control1)
+2026-04-10 08:20:25.683  INFO 10204 --- [main] com.example.demo.Control1Application     : No active profile set, falling back to default profiles: default
+2026-04-10 08:20:26.120  INFO 10204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-10 08:20:26.148  INFO 10204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2026-04-10 08:20:26.440  INFO 10204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6789 (http)
+2026-04-10 08:20:26.456  INFO 10204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-10 08:20:26.456  INFO 10204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2026-04-10 08:20:26.504  INFO 10204 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-10 08:20:26.504  INFO 10204 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 785 ms
+2026-04-10 08:20:26.643  INFO 10204 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-10 08:20:26.684  INFO 10204 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2026-04-10 08:20:26.766  INFO 10204 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-04-10 08:20:26.828  INFO 10204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10 08:20:29.894 ERROR 10204 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: El intento de conexión falló.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:447) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1356) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1345) ~[spring-boot-2.5.9.jar:2.5.9]
+	at com.example.demo.Control1Application.main(Control1Application.java:10) ~[classes/:na]
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 50 common frames omitted
+
+2026-04-10 08:20:29.896  WARN 10204 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.postgresql.util.PSQLException: El intento de conexión falló.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:447) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1356) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1345) ~[spring-boot-2.5.9.jar:2.5.9]
+	at com.example.demo.Control1Application.main(Control1Application.java:10) ~[classes/:na]
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 50 common frames omitted
+
+2026-04-10 08:20:29.902  INFO 10204 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-04-10 08:20:30.180  INFO 10204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10 08:20:31.068 ERROR 10204 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: El intento de conexión falló.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:447) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1356) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1345) ~[spring-boot-2.5.9.jar:2.5.9]
+	at com.example.demo.Control1Application.main(Control1Application.java:10) ~[classes/:na]
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 48 common frames omitted
+
+2026-04-10 08:20:31.069  WARN 10204 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
+2026-04-10 08:20:31.069 ERROR 10204 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : El intento de conexión falló.
+2026-04-10 08:20:31.073 ERROR 10204 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2026-04-10 08:20:31.073  WARN 10204 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2026-04-10 08:20:31.074  INFO 10204 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-10 08:20:31.079  INFO 10204 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10 08:20:31.085 ERROR 10204 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:447) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1356) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1345) ~[spring-boot-2.5.9.jar:2.5.9]
+	at com.example.demo.Control1Application.main(Control1Application.java:10) ~[classes/:na]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.15.jar:5.3.15]
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: El intento de conexión falló.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43) ~[hibernate-core-5.4.33.jar:5.4.33]
+	... 34 common frames omitted
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 48 common frames omitted
+
+2026-04-10 08:58:56.624  INFO 7364 --- [main] com.example.demo.Control1Application     : Starting Control1Application using Java 17.0.4.1 on Windows10-2025 with PID 7364 (C:\Users\usuario\Desktop\wrk\Control1\target\classes started by usuario in C:\Users\usuario\Desktop\wrk\Control1)
+2026-04-10 08:58:56.630  INFO 7364 --- [main] com.example.demo.Control1Application     : No active profile set, falling back to default profiles: default
+2026-04-10 08:58:56.932  INFO 7364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-10 08:58:56.960  INFO 7364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+2026-04-10 08:58:57.181  INFO 7364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6789 (http)
+2026-04-10 08:58:57.186  INFO 7364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-10 08:58:57.186  INFO 7364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2026-04-10 08:58:57.220  INFO 7364 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-10 08:58:57.220  INFO 7364 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
+2026-04-10 08:58:57.300  INFO 7364 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-10 08:58:57.323  INFO 7364 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2026-04-10 08:58:57.387  INFO 7364 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-04-10 08:58:57.441  INFO 7364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10 08:59:00.365 ERROR 7364 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: El intento de conexión falló.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:447) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1356) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1345) ~[spring-boot-2.5.9.jar:2.5.9]
+	at com.example.demo.Control1Application.main(Control1Application.java:10) ~[classes/:na]
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 50 common frames omitted
+
+2026-04-10 08:59:00.366  WARN 7364 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.postgresql.util.PSQLException: El intento de conexión falló.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:447) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1356) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1345) ~[spring-boot-2.5.9.jar:2.5.9]
+	at com.example.demo.Control1Application.main(Control1Application.java:10) ~[classes/:na]
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 50 common frames omitted
+
+2026-04-10 08:59:00.373  INFO 7364 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-04-10 08:59:00.608  INFO 7364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10 08:59:01.503 ERROR 7364 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: El intento de conexión falló.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:447) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1356) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1345) ~[spring-boot-2.5.9.jar:2.5.9]
+	at com.example.demo.Control1Application.main(Control1Application.java:10) ~[classes/:na]
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 48 common frames omitted
+
+2026-04-10 08:59:01.504  WARN 7364 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
+2026-04-10 08:59:01.504 ERROR 7364 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : El intento de conexión falló.
+2026-04-10 08:59:01.508 ERROR 7364 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2026-04-10 08:59:01.508  WARN 7364 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2026-04-10 08:59:01.509  INFO 7364 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-10 08:59:01.514  INFO 7364 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10 08:59:01.521 ERROR 7364 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:447) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1356) ~[spring-boot-2.5.9.jar:2.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1345) ~[spring-boot-2.5.9.jar:2.5.9]
+	at com.example.demo.Control1Application.main(Control1Application.java:10) ~[classes/:na]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.15.jar:5.3.15]
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: El intento de conexión falló.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43) ~[hibernate-core-5.4.33.jar:5.4.33]
+	... 34 common frames omitted
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 48 common frames omitted
+
+2026-04-10 08:59:50.552  INFO 6628 --- [main] com.example.demo.Control1Application     : Starting Control1Application using Java 17.0.4.1 on Windows10-2025 with PID 6628 (C:\Users\usuario\Desktop\wrk\Control1\target\classes started by usuario in C:\Users\usuario\Desktop\wrk\Control1)
+2026-04-10 08:59:50.553  INFO 6628 --- [main] com.example.demo.Control1Application     : No active profile set, falling back to default profiles: default
+2026-04-10 08:59:51.006  INFO 6628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-10 08:59:51.048  INFO 6628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2026-04-10 08:59:51.405  INFO 6628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6789 (http)
+2026-04-10 08:59:51.416  INFO 6628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-10 08:59:51.416  INFO 6628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2026-04-10 08:59:51.481  INFO 6628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-10 08:59:51.483  INFO 6628 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 886 ms
+2026-04-10 08:59:51.625  INFO 6628 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-10 08:59:51.661  INFO 6628 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2026-04-10 08:59:51.755  INFO 6628 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-04-10 08:59:51.827  INFO 6628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10 08:59:51.972  INFO 6628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-10 08:59:51.984  INFO 6628 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-04-10 08:59:52.527  INFO 6628 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-04-10 08:59:52.535  INFO 6628 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 08:59:52.720  WARN 6628 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-10 08:59:52.956  INFO 6628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6789 (http) with context path ''
+2026-04-10 08:59:52.963  INFO 6628 --- [main] com.example.demo.Control1Application     : Started Control1Application in 1.902 seconds (JVM running for 2.268)
+2026-04-10 09:07:18.792  INFO 6628 --- [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-04-10 09:07:18.799  INFO 6628 --- [RMI TCP Connection(18)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 09:07:18.801  INFO 6628 --- [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-10 09:07:18.802  INFO 6628 --- [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-10 09:07:22.131  INFO 8616 --- [main] com.example.demo.Control1Application     : Starting Control1Application using Java 17.0.4.1 on Windows10-2025 with PID 8616 (C:\Users\usuario\Desktop\wrk\Control1\target\classes started by usuario in C:\Users\usuario\Desktop\wrk\Control1)
+2026-04-10 09:07:22.132  INFO 8616 --- [main] com.example.demo.Control1Application     : No active profile set, falling back to default profiles: default
+2026-04-10 09:07:22.374  INFO 8616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-10 09:07:22.396  INFO 8616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2026-04-10 09:07:22.584  INFO 8616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6789 (http)
+2026-04-10 09:07:22.588  INFO 8616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-10 09:07:22.589  INFO 8616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2026-04-10 09:07:22.619  INFO 8616 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-10 09:07:22.619  INFO 8616 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 467 ms
+2026-04-10 09:07:22.689  INFO 8616 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-10 09:07:22.708  INFO 8616 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2026-04-10 09:07:22.762  INFO 8616 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-04-10 09:07:22.801  INFO 8616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10 09:07:22.869  INFO 8616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-10 09:07:22.875  INFO 8616 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-04-10 09:07:23.170  INFO 8616 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-04-10 09:07:23.178  INFO 8616 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 09:07:23.282  WARN 8616 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-10 09:07:23.405  INFO 8616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6789 (http) with context path ''
+2026-04-10 09:07:23.409  INFO 8616 --- [main] com.example.demo.Control1Application     : Started Control1Application in 1.975 seconds (JVM running for 2.323)
+2026-04-10 09:12:47.471  INFO 8616 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-04-10 09:12:47.477  INFO 8616 --- [RMI TCP Connection(12)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 09:12:47.478  INFO 8616 --- [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-10 09:12:47.481  INFO 8616 --- [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-10 09:12:55.784  INFO 5632 --- [main] com.example.demo.Control1Application     : Starting Control1Application using Java 17.0.4.1 on Windows10-2025 with PID 5632 (C:\Users\usuario\Desktop\wrk\Control1\target\classes started by usuario in C:\Users\usuario\Desktop\wrk\Control1)
+2026-04-10 09:12:55.787  INFO 5632 --- [main] com.example.demo.Control1Application     : No active profile set, falling back to default profiles: default
+2026-04-10 09:12:56.049  INFO 5632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-10 09:12:56.074  INFO 5632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+2026-04-10 09:12:56.266  INFO 5632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6789 (http)
+2026-04-10 09:12:56.271  INFO 5632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-10 09:12:56.271  INFO 5632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2026-04-10 09:12:56.300  INFO 5632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-10 09:12:56.301  INFO 5632 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 486 ms
+2026-04-10 09:12:56.379  INFO 5632 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-10 09:12:56.399  INFO 5632 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2026-04-10 09:12:56.450  INFO 5632 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-04-10 09:12:56.491  INFO 5632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10 09:12:56.567  INFO 5632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-10 09:12:56.574  INFO 5632 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-04-10 09:12:56.856  INFO 5632 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-04-10 09:12:56.860  INFO 5632 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 09:12:56.962  WARN 5632 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-10 09:12:57.085  INFO 5632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6789 (http) with context path ''
+2026-04-10 09:12:57.088  INFO 5632 --- [main] com.example.demo.Control1Application     : Started Control1Application in 1.911 seconds (JVM running for 2.253)
+2026-04-10 09:15:29.049  INFO 5632 --- [http-nio-6789-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-10 09:15:29.050  INFO 5632 --- [http-nio-6789-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-10 09:15:29.050  INFO 5632 --- [http-nio-6789-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-10 09:26:27.311  INFO 5632 --- [RMI TCP Connection(22)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-04-10 09:26:27.321  INFO 5632 --- [RMI TCP Connection(22)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 09:26:27.323  INFO 5632 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-10 09:26:27.328  INFO 5632 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-10 09:28:50.175  INFO 5416 --- [main] com.example.demo.Control1Application     : Starting Control1Application using Java 17.0.4.1 on Windows10-2025 with PID 5416 (C:\Users\usuario\Desktop\wrk\Control1\target\classes started by usuario in C:\Users\usuario\Desktop\wrk\Control1)
+2026-04-10 09:28:50.176  INFO 5416 --- [main] com.example.demo.Control1Application     : No active profile set, falling back to default profiles: default
+2026-04-10 09:28:50.376  INFO 5416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-10 09:28:50.394  INFO 5416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2026-04-10 09:28:50.561  INFO 5416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6789 (http)
+2026-04-10 09:28:50.567  INFO 5416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-10 09:28:50.568  INFO 5416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2026-04-10 09:28:50.596  INFO 5416 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-10 09:28:50.596  INFO 5416 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 401 ms
+2026-04-10 09:28:50.663  INFO 5416 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-10 09:28:50.681  INFO 5416 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2026-04-10 09:28:50.723  INFO 5416 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-04-10 09:28:50.758  INFO 5416 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10 09:28:50.821  INFO 5416 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-10 09:28:50.827  INFO 5416 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-04-10 09:28:51.037  INFO 5416 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-04-10 09:28:51.040  INFO 5416 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 09:28:51.131  WARN 5416 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-10 09:28:51.248  INFO 5416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6789 (http) with context path ''
+2026-04-10 09:28:51.252  INFO 5416 --- [main] com.example.demo.Control1Application     : Started Control1Application in 1.889 seconds (JVM running for 2.267)
+2026-04-10 09:29:01.602  INFO 5416 --- [http-nio-6789-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-10 09:29:01.602  INFO 5416 --- [http-nio-6789-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-10 09:29:01.602  INFO 5416 --- [http-nio-6789-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-10 09:31:04.678  WARN 5416 --- [http-nio-6789-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2026-04-10 09:33:44.966  INFO 5416 --- [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-04-10 09:33:44.975  INFO 5416 --- [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 09:33:44.976  INFO 5416 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-10 09:33:44.982  INFO 5416 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-10 09:33:48.494  INFO 2600 --- [main] com.example.demo.Control1Application     : Starting Control1Application using Java 17.0.4.1 on Windows10-2025 with PID 2600 (C:\Users\usuario\Desktop\wrk\Control1\target\classes started by usuario in C:\Users\usuario\Desktop\wrk\Control1)
+2026-04-10 09:33:48.495  INFO 2600 --- [main] com.example.demo.Control1Application     : No active profile set, falling back to default profiles: default
+2026-04-10 09:33:48.761  INFO 2600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-10 09:33:48.786  INFO 2600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2026-04-10 09:33:49.012  INFO 2600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6789 (http)
+2026-04-10 09:33:49.017  INFO 2600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-10 09:33:49.017  INFO 2600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2026-04-10 09:33:49.055  INFO 2600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-10 09:33:49.056  INFO 2600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 535 ms
+2026-04-10 09:33:49.145  INFO 2600 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-10 09:33:49.167  INFO 2600 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2026-04-10 09:33:49.230  INFO 2600 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-04-10 09:33:49.277  INFO 2600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10 09:33:49.386  INFO 2600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-10 09:33:49.394  INFO 2600 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-04-10 09:33:49.693  INFO 2600 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-04-10 09:33:49.696  INFO 2600 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 09:33:49.828  WARN 2600 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-10 09:33:49.985  INFO 2600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6789 (http) with context path ''
+2026-04-10 09:33:49.990  INFO 2600 --- [main] com.example.demo.Control1Application     : Started Control1Application in 1.917 seconds (JVM running for 2.268)
+2026-04-10 09:34:21.686  INFO 2600 --- [http-nio-6789-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-10 09:34:21.686  INFO 2600 --- [http-nio-6789-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-10 09:34:21.688  INFO 2600 --- [http-nio-6789-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-10 09:46:16.540  INFO 2600 --- [RMI TCP Connection(23)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-04-10 09:46:16.553  INFO 2600 --- [RMI TCP Connection(23)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10 09:46:16.554  INFO 2600 --- [RMI TCP Connection(23)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-10 09:46:16.559  INFO 2600 --- [RMI TCP Connection(23)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
